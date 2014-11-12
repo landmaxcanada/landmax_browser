@@ -1,0 +1,14 @@
+{
+  "name": "Landmax_Browser",
+  "description": "",
+  "homepage": "",
+  "keywords": [
+  ],
+  "author": "",
+  "private": true,
+  "dependencies": {
+    "polymer": "Polymer/polymer#master",
+    "core-pages": "Polymer/core-pages#master",
+    "paper-elements": "Polymer/paper-elements#master"
+  }
+}

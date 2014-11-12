@@ -1,0 +1,69 @@
+<!DOCTYPE html><html><head>
+  <title>Landmax Tabs Webview</title>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=no">
+
+  <!--<script src="../bower_components/webcomponentsjs/webcomponents.js"></script>-->
+
+  <link rel="import" href="../bower_components/polymer/polymer.html">
+  <link rel="import" href="../bower_components/core-pages/core-pages.html">
+  <!--<link rel="import" href="../bower_components/core-animated-pages/transitions/slide-from-right.html">-->
+  <link rel="import" href="../bower_components/core-icons/core-icons.html">
+  <link rel="import" href="../bower_components/core-menu/core-menu.html">
+  <link rel="import" href="../bower_components/core-toolbar/core-toolbar.html">
+  <link rel="import" href="../bower_components/core-media-query/core-media-query.html">
+
+  <link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+  <link rel="import" href="../bower_components/paper-tabs/paper-tabs.html">
+  <link rel="stylesheet" href="../css/styles.css">
+
+</head>
+<body unresolved="" fullbleed vertical layout>
+
+<core-toolbar  class="medium">
+  <paper-icon-button icon="menu"></paper-icon-button>
+  <div flex>Landmax Real Estate Browser</div>
+  <paper-icon-button icon="arrow-back" id="btnBack" class="hide"></paper-icon-button>
+  <paper-icon-button icon="arrow-forward" id="btnForward" class="hide"></paper-icon-button>
+  <paper-icon-button icon="autorenew" id="btnReload" class="hide"></paper-icon-button>
+  <paper-icon-button icon="cancel" id="btnStop" class="hide"></paper-icon-button>
+  <paper-icon-button icon="search"></paper-icon-button>
+  <paper-icon-button icon="more-vert"></paper-icon-button>
+  <div class="bottom fit" horizontal layout>
+    <paper-tabs id="scrollableTabs" selected="0" scrollable="" role="tablist" horizontal center layout>
+      <paper-tab role="tab" inline flex center-center horizontal layout>Landmax</paper-tab>
+      <paper-tab role="tab" inline flex center-center horizontal layout>Realtor.ca</paper-tab>
+      <paper-tab role="tab" inline flex center-center horizontal layout>Google Map</paper-tab>
+      <paper-tab role="tab" inline flex center-center horizontal layout>Assessment</paper-tab>
+      <paper-tab role="tab" inline flex center-center horizontal layout>FIFTH</paper-tab>
+      <paper-tab role="tab" inline flex center-center horizontal layout>THE SIXTH TAB</paper-tab>
+      <paper-tab role="tab" inline flex center-center horizontal layout>NUMBER SEVEN</paper-tab>
+      <paper-tab role="tab" inline flex center-center horizontal layout>EIGHT</paper-tab>
+      <paper-tab role="tab" inline flex center-center horizontal layout>NUMBER NINE</paper-tab>
+      <paper-tab role="tab" inline flex center-center horizontal layout>THE TENTH</paper-tab>
+      <paper-tab role="tab" inline flex center-center horizontal layout>THE ITEM ELEVEN</paper-tab>
+      <paper-tab role="tab" inline flex center-center horizontal layout>TWELFTH ITEM</paper-tab>
+    </paper-tabs>
+</div>
+  </core-toolbar>
+
+<core-pages selected="0">
+  <section id="page1" class="core-selected">
+    <webview id="wv-home" src="http://landmax.ca"></webView>
+  </section>
+  <section id="page2">
+    <webview id="wv-mls" src="http://www.realtor.ca"></webView>
+  </section>
+  <section id="page3">
+    <webview id="wv-gMap" src="https://www.google.ca/maps/@49.6773995,-115.984656,12z?hl=en"></webView>
+  </section>
+    <section id="page4">
+    <webview id="wv-assessment" src="http://evaluebc.bcassessment.ca"></webView>
+  </section>
+</core-pages>
+
+  <!-- detect when window is narrow -->
+  <core-media-query id="mediaQuery" query="max-width: 640px"></core-media-query>
+
+  <script src="js/tabs.js"></script>
+
+</body></html>
